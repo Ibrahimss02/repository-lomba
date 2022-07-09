@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Repository Lomba Raion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="lomba">Lomba</string>
+    <string name="lomba_subtitle">Cek semua lomba yang ada!</string>
+    <string name="buat_kelompok">Buat Kelompok</string>
+    <string name="kelompok_subtitle">Buat kelompokmu!</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="kategori">Kategori</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="status_lomba">Status Lomba</string>
+    <string name="alumni_lomba">Alumni Lomba</string>
+    <string name="kategori_hadiah">Kategori Hadiah</string>
+    <string name="detail_kelompok">Detail Kelompok</string>
+    <string name="anggota">Anggota</string>
+    <string name="history_lomba">History Lomba</string>
+</resources>

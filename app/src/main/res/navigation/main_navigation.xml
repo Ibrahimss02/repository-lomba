@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homepage">
+
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.drunken.repositorylombaraion.views.Homepage"
+        android:label="homepage"
+        tools:layout="@layout/fragment_homepage">
+        <action
+            android:id="@+id/action_homepage_to_lombaDetailPage"
+            app:destination="@id/lombaDetailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/lombaDetailPage"
+        android:name="com.drunken.repositorylombaraion.views.LombaDetailPage"
+        android:label="LombaDetailPage"
+        tools:layout="@layout/fragment_lomba_detail_page">
+        <argument
+            android:name="idLomba"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_lombaDetailPage_to_kelompokDetailPage"
+            app:destination="@id/kelompokDetailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/kelompokDetailPage"
+        android:name="com.drunken.repositorylombaraion.views.KelompokDetailPage"
+        android:label="KelompokDetailPage"
+        tools:layout="@layout/fragment_kelompok_detail_page">
+        <argument
+            android:name="idKelompok"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

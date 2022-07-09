@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.drunken.repositorylombaraion.models.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lombaCardView"
+            android:layout_width="0dp"
+            android:layout_height="87dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="14dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cv_shape_bg_wr"
+                    android:importantForAccessibility="no" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_face_24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="24dp"/>
+
+                <TextView
+                    android:id="@+id/team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/hasil_text"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginEnd="24dp"
+                    android:text="@{user.component2()}"
+                    marqueeOverflowText="@{true}"
+                    android:maxWidth="225dp"
+                    tools:text="Glen Angelo"
+                    android:scrollHorizontally="true"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/hasil_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/team_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/team_name"
+                    app:layout_constraintHorizontal_bias="0"
+                    marqueeOverflowText="@{true}"
+                    android:layout_marginEnd="24dp"
+                    android:maxWidth="185dp"
+                    android:scrollHorizontally="true"
+                    tools:text="Programmer App"
+                    android:textAlignment="textStart"
+                    android:text="@{user.component5()}"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
